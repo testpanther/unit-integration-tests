@@ -28,7 +28,9 @@ jobs:
       
       - run:
           name: Setup chromedriver
-          command: sudo cp chromedriver /usr/local/bin/chromedriver
+          - wget https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip
+          - unzip chromedriver_linux64.zip
+          - sudo cp chromedriver /usr/local/bin/chromedriver
           
       - run:
           name: Download Selenium
