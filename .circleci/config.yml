@@ -26,12 +26,10 @@ jobs:
 
       - run: npm install
       
-      - run:
-          name: Setup chromedriver
-          - wget https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip
-          - unzip chromedriver_linux64.zip
-          - sudo cp chromedriver /usr/local/bin/chromedriver
-          
+      - run: wget https://chromedriver.storage.googleapis.com/2.34/chromedriver_linux64.zip
+      - run: unzip chromedriver_linux64.zip
+      - run: sudo cp chromedriver /usr/local/bin/chromedriver
+      
       - run:
           name: Download Selenium
           command: |
